@@ -1,0 +1,3 @@
+.terraform
+*.oauth-token
+*.tfstate*
