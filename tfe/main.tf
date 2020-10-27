@@ -50,6 +50,15 @@ resource "tfe_variable" "dev_aws_secret" {
   description  = "aws secret key"
 }
 
+resource "tfe_variable" "dev_aws_token" {
+  key          = "AWS_SESSION_TOKEN"
+  value        = var.aws_session_token
+  category     = "env"
+  sensitive    = true
+  workspace_id = tfe_workspace.dev.id
+  description  = "aws session token"
+}
+
 resource "tfe_variable" "dev_aws_region" {
   key          = "AWS_DEFAULT_REGION"
   value        = "ap-south-1"
@@ -95,6 +104,15 @@ resource "tfe_variable" "qa_aws_secret" {
   description  = "aws secret key"
 }
 
+resource "tfe_variable" "qa_aws_token" {
+  key          = "AWS_SESSION_TOKEN"
+  value        = var.aws_session_token
+  category     = "env"
+  sensitive    = true
+  workspace_id = tfe_workspace.qa.id
+  description  = "aws session token"
+}
+
 resource "tfe_variable" "qa_aws_region" {
   key          = "AWS_DEFAULT_REGION"
   value        = "eu-north-1"
@@ -138,6 +156,15 @@ resource "tfe_variable" "prod_aws_secret" {
   sensitive    = true
   workspace_id = tfe_workspace.prod.id
   description  = "aws secret key"
+}
+
+resource "tfe_variable" "prod_aws_token" {
+  key          = "AWS_SESSION_TOKEN"
+  value        = var.aws_session_token
+  category     = "env"
+  sensitive    = true
+  workspace_id = tfe_workspace.prod.id
+  description  = "aws session token"
 }
 
 resource "tfe_variable" "prod_aws_region" {
