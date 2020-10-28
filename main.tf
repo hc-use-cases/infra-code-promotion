@@ -2,7 +2,6 @@
 // qa to eu-north-1 - Stockholm
 // prod to eu-west-3 - Paris
 
-
 module "vpc" {
   source = "github.com/andrewpopa/terraform-aws-vpc"
 
