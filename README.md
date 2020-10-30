@@ -80,4 +80,4 @@ The idea to use CI in the workflow is to be able to add any additional extra ste
 The example used in this repo will deploy all 3 environments in single pipeline. This not obligatory to be the case in your pipeline as well as for production, for example, you might use manual approval.
 
 ### Trigger CI
-CI is triggered by push to the repository
+CI is triggered by pull request to the repository
